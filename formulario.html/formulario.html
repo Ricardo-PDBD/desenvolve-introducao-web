@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    
+    <h1>Pesquisa de satisfação</h1>
+
+    <form action="">
+        <p>
+            <label for="nome">Nome Completo: </label>
+            <input type="text" placeholder="Digite seu nome" id="nome">
+        </p>
+        <p>
+            <label for="telefone">Telefone: </label>
+            <input type="phone" placeholder="Digite seu telefone" id="telefone">
+        </p>
+        <p>
+            <label for="email">email: </label>
+            <input type="email" placeholder="Digite seu email" id="email">
+        </p>
+        <p>
+            Estado Civil: 
+            <input type="radio" id="solteiro" name="estado-civil">
+            <label for="solteiro">Solteiro</label>
+            <input type="radio" id="casado" name="estado-civil">
+            <label for="casado">Casado</label>
+            <input type="radio" id="divorciado" name="estado-civil">
+            <label for="divorciado">Divorciado</label>
+        </p>
+        <p>
+            Satisfação com o produto: 
+            <input type="radio" id="pouco" name="satisfação">
+            <label for="pouco">Pouco satisfeito</label>
+            <input type="radio" id="satisfeito" name="satisfação">
+            <label for="satisfeito">Satisfeito</label>
+            <input type="radio" id="muito" name="satisfação">
+            <label for="muito">Muito Satisfeito</label>
+        </p>
+        <p>
+            Estado: 
+            <select>
+                <option>Espirito Santos</option>
+                <option>Minas Gerais</option>
+                <option>Rio de Janeiro</option>
+                <option>São Paulo</option>
+            </select>
+        </p>
+        <p>
+            <input type="checkbox" id="termo">
+            <label for="termo">Autoriza compartilhar sua resposta?</label>
+        </p>
+
+        <input type="submit" value="Responder">
+    </form>
+
+</body>
+</html>
