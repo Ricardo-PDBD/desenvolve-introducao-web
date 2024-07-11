@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62,5%;
+    --ft-color: rgb(0, 13, 73);
+    --bg-color: rgb(166, 173, 204);
+    --destaque-color: rgb(233, 212, 23);
+}
+
+html {
+    background: var(--bg-color);
+    color: var(--ft-color);
+}
