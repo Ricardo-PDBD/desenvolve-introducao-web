@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62,5%;
+    --ft-color: rgb(0, 13, 73);
+    --bg-color: rgb(166, 173, 204);
+    --destaque-color: rgb(233, 212, 23);
+}
+
+html {
+    background: var(--bg-color);
+    color: var(--ft-color);
+
+    font-size: 18px;
+    font-family: sans-serif;
+    text-indent: 1em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.summary {
+    text-align: center;
+}
+
+.main p {
+    line-height: 1.5;
+}
+
+abbr {
+    font-variant: small-caps;
+}
