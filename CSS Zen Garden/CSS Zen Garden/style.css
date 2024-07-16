@@ -89,3 +89,22 @@ aside ul li {
     border: solid 2px var(--ft-color);
     padding: 0.5em;
 }
+
+.page-wrapper {
+    position: relative;
+}
+
+.explanation {
+    width: 60%;
+    border-right: solid 1px #1f295c;
+    padding-right: 2%;
+}
+
+#design-selection {
+    position: absolute;
+    top: 560px;
+    left: 62%;
+    padding-left: 1%;
+    padding-right: 1%;
+    line-height: 1.1;
+}
