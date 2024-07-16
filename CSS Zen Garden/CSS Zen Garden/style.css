@@ -1,23 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 :root {
-    font-size: 62,5%;
     --ft-color: rgb(0, 13, 73);
     --bg-color: rgb(166, 173, 204);
     --destaque-color: rgb(233, 212, 23);
 }
 
+.page-wrapper {
+    width: 80%;
+    max-width: 1280px;
+    margin: auto;
+}
+
 html {
+
     background: var(--bg-color);
     color: var(--ft-color);
 
     font-size: 18px;
     font-family: sans-serif;
     text-indent: 1em;
+}
+
+#zen-intro header {
+    background: var(--ft-color);
+    color: var(--bg-color);
+}
+
+#zen-intro header h1, #zen-intro header h2 {
+    display: inline-block;
+}
+
+#zen-intro header h1 {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+#zen-intro {
+    height: 550px;
 }
 
 h1, h2, h3 {
@@ -47,4 +66,26 @@ h3 {
 
 abbr {
     font-variant: small-caps;
+}
+
+#design-archives {
+    display: none;
+}
+
+aside ul {
+    list-style-type: none;;
+}
+
+aside ul li {
+    margin: 1em;
+    text-align: center;
+}
+
+.main footer {
+    margin: 4%;
+}
+
+.main footer a {
+    border: solid 2px var(--ft-color);
+    padding: 0.5em;
 }
