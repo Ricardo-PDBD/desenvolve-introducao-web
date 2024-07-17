@@ -105,11 +105,23 @@ aside ul li {
 
 #design-selection {
     position: absolute;
-    top: 540px;
+    top: 480px;
     left: 62%;
     padding-left: 1%;
     padding-right: 1%;
     line-height: 1.1;
+
+}
+
+.design-selection li {
+    border-top: solid 1px #1f295c;
+    padding-top: 2px;
+
+}
+
+.design-selection li:last-of-type {
+    border-bottom: solid 1px #1f295c;
+    padding-bottom: 4px;
 }
 
 .benefits {
@@ -140,4 +152,23 @@ aside ul li {
 
 .participation h3 {
     align-self: center;
+}
+
+a {
+    color: rgb(117, 106, 8);
+    font-weight: bold;
+}
+
+a:hover {
+    color: rgba(117, 106, 8, 0.568);
+}
+
+a:visited {
+    font-weight: normal;
+}
+
+.main p:first-of-type:first-letter {
+    font-size: 3em;
+    font-family: 'Times New Roman', Times, serif;
+    float: left;
 }
