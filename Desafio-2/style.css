@@ -1,0 +1,285 @@
+/*
+    Configurando a página para tirar todos os espaçamentos pré-definidos e definir
+    o tamanho das bordas sendo o tamanho das caixas.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    Configurando um padrão de font-size na raiz para facilitar o uso de médidas relativas
+    como REM (10px = 1rem), além de configurar variáveis de atalho (font,cores, etc...) 
+    para facilitar na manutenção do site.
+*/
+
+:root {
+    font-size: 62.5%;
+
+    --ff-t: 'Roboto', Sans-serif;
+    --ff-p: 'Arial', Sans-serif;
+
+    --bg-light-color: rgb(98, 112, 243);
+    --bg-dark-color: rgb(4, 14, 95);
+    --txt-light-color: rgb(68, 70, 1);
+    --txt-dark-color: rgb(201, 198, 11);
+    --title-color: rgb(0, 0, 0);
+    --destaque-color: rgb(240, 240, 245);
+
+    --switch-bg-url: url(./assets/sun.svg);
+}
+
+.light {
+    background-color: var(--bg-dark-color);
+    color: var(--txt-light-color);
+
+}
+  
+
+#switch {
+    position: relative;
+    width: 6rem;
+
+    padding-top: 2rem;
+    padding-left: 2rem;
+   
+}
+
+#switch button {
+    width: 4rem;
+    height: 4rem;
+
+    margin-top: 1rem;
+    margin-left: 2rem;
+
+    background: var(--txt-dark-color);
+    
+    border: 0;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+
+    animation: slide-back 0.2s;
+}
+
+.light #switch button {
+    animation: slide-in 0.4s forwards;
+}
+
+#switch button:hover {
+    cursor: pointer;
+}
+
+#switch span {
+    display: flex;
+    width: 8rem;
+    height: 2rem;
+    background: white;
+    border: 1px solid black;
+    backdrop-filter: blur(4px);
+    border-radius: 9999px;
+
+    background: var(--bg-light-color);
+
+}
+
+#switch button img {
+    width: 3rem;
+    height: 3rem;
+}   
+
+/*
+Seguindo o conceito "mobile first", primeiramente irei dimencionar a página para celular,
+após, utilizando @media queary ajustar para tamanho de telas maiores.
+*/
+
+body {
+    max-width: 50rem;
+}
+
+header {
+    width: 100%;
+    max-height: auto;
+
+    background-color: var(--bg-dark-color);
+}
+
+h1 {
+    font-family: var(--ff-t);
+    font-size: 4rem;
+    font-weight: 700;
+    font-style: bold;
+    line-height: 1.2rem;
+
+    color: var(--destaque-color);
+
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    border-bottom: solid 2px var(--destaque-color);
+}
+
+#menu {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
+#menu a, main a {
+    color: var(--destaque-color);
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+/*
+    Colocando um efeito Hover nos links.
+*/
+
+#menu a:hover, main a:hover {
+    color: var(--txt-dark-color);
+    border-top: solid 1px var(--txt-dark-color);
+}
+
+h2 {
+    font-family: var(--ff-t);
+    font-size: 3rem;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.2rem;
+
+    color: var(--destaque-color);
+
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+main {
+    position: relative;
+    background-color: var(--bg-light-color);
+
+    padding-bottom: 3rem;
+}
+
+section {
+    padding: 2rem;
+}
+
+p {
+    font-family: var(--ff-p);
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2rem;
+    text-indent: 1em;
+}
+
+main a {
+    position: absolute;
+    right: 0;
+    margin: 1rem 2rem 2rem auto;
+}
+
+/*
+    Colocando um destaque maior nas tabelas.
+*/
+
+table {
+    margin-top: 2rem;
+    color: var(--title-color);
+    border: solid 1px var(--destaque-color);
+}
+
+footer {
+    background-color: var(--bg-dark-color);
+    padding: 2rem;
+
+    text-align: center;
+}
+
+footer p {
+    color: var(--destaque-color);
+}
+
+/*
+    Configurando o site para tamanhos de telas maiores.
+*/
+
+@media screen and (min-width: 500px) {
+    body {
+        max-width: 140rem;
+    }
+    
+    /*
+        Coloquei as tabelas lado a lado e dei um espaço entre elas.
+    */
+
+    .tabela {
+        display: flex;
+        gap: 5rem;
+    }
+
+    /*
+        Arrumei o tamanho da fonte para se adequar melhor ao tamanho da página.
+    */
+
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    p {
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+
+    #menu a, main a {
+        font-size: 2rem;
+    }
+
+    /*
+        mudei o posicionamento de alguns h2 e links da esquerda pra direita.
+    */
+
+    .left {
+        text-align: end;
+    }
+
+    main {
+        position: relative;
+    }
+
+    .right {
+        position: absolute;
+        left: 0;
+        padding-left: 2rem;
+    }
+
+    @keyframes slide-in {
+        from {
+            left: 0;
+        }
+        to {
+            left: 70%;
+        }
+    }
+
+    @keyframes slide-back {
+        from {
+            left: 70%;
+        }
+        to {
+            left: 0;
+        }
+    }
+
+}
